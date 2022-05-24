@@ -1,0 +1,37 @@
+html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.form__login{
+    max-width: 900px;
+    padding: 100px;
+    margin-top: 100px;
+    background: #fff;
+}
+
+body.bg__img-login{
+    max-width: 100%;
+    height: auto;
+    background: url(../img/bg-login.jpg) no-repeat;
+}
+
+.cont__form{
+    justify-content: flex-end;
+}
+
+.form__login button[type=submit]{
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .bd-mobile{
+        padding: 70px;
+    }
+
+    .cont__form{
+        justify-content: center;
+        align-items: center;
+    }
+}
