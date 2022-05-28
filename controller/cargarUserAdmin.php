@@ -14,36 +14,36 @@
                   <div class="row">
                     <div class="form-group col-md-6 ">
                             <label for="iduser">Identificacion</label>
-                            <input type="number" readonly="readonly" value="'.$f['iduser'].'" class="form-control" name="iduser" id="iduser" placeholder="Tu numero de identificación" required="">
+                            <input type="number" readonly="readonly" value="'.$f['iduser'].'" class="form-control" name="iduser" id="iduser" placeholder="Tu numero de identificación">
                     </div>
                           <div class="form-group col-md-6 ">
                             <label for="name">Nombres</label>
-                            <input type="text" value="'.$f['name'].'" class="form-control" name="name" id="name" placeholder="Escribe tus nombres" required="">
+                            <input type="text" value="'.$f['name'].'" class="form-control" name="name" id="name" placeholder="Escribe tus nombres">
                           </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6 ">
                       <label for="last_name">Apellidos</label>
-                      <input type="text" value="'.$f['last_name'].'" class="form-control" name="last_name" id="last_name" placeholder="Escribe tus apellidos" required="">
+                      <input type="text" value="'.$f['last_name'].'" class="form-control" name="last_name" id="last_name" placeholder="Escribe tus apellidos">
                     </div>
                     <div class="form-group col-md-6 ">
                         <label for="phone">Telefono</label>
-                        <input type="text" value="'.$f['phone'].'" class="form-control" name="phone" id="phone" placeholder="Escribe tu numero de contacto" required="">
+                        <input type="text" value="'.$f['phone'].'" class="form-control" name="phone" id="phone" placeholder="Escribe tu numero de contacto">
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6 ">
                       <label for="email">Email</label>
-                      <input type="email" value="'.$f['email'].'" class="form-control" name="email" id="email" placeholder="Escribe tu email" required="">
+                      <input type="email" value="'.$f['email'].'" class="form-control" name="email" id="email" placeholder="Escribe tu email">
                     </div>
 
                     <div class="form-group col-md-6 ">
-                      <label for="cargo">Casrgo</label>
-                      <select class="form-control" name="cargo" id="cargo" required="">
+                      <label for="cargo">Cargo</label>
+                      <select class="form-control" name="cargo" id="cargo">
                               <option value="'.$f['cargo'].'">'.$f['cargo'].'</option>
-                              <option value="1">Administrador</option>
-                              <option value="2">Supervisor</option>
-                              <option value="3">Vendedor</option>
+                              <option value="Administrador">Administrador</option>
+                              <option value="Supervisor">Supervisor</option>
+                              <option value="Vendedor">Vendedor</option>
                       </select>
                     </div>
                   </div>

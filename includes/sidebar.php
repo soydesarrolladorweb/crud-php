@@ -36,13 +36,13 @@
                     <a href="registrar-usuarios-admin.php" class="nav-link">
                       <i class="far fa-user nav-icon"></i>
                       <span class="right badge badge-danger">New</span>
-                      <p>Registrar</p>
+                      <p>Registrar Usuario</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="ver-usuarios-admin.php" class="nav-link">
                       <i class="far fa-eye nav-icon"></i>
-                      <p>Ver</p>
+                      <p>Listar Usuarios</p>
                     </a>
                   </li>
                 </ul>

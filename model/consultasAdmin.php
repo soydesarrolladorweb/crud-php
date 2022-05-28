@@ -2,7 +2,7 @@
     // Se crea la clase ya que estamos programando orientado en objetos
     class Consultas{
         // Llamamos los argumentos necesarios para realizar el registro, se deben utilizar los mismos nombres de la db
-        public function insertUsers($iduser, $name, $last_name, $phone, $email, $pass, $cargo, $status){
+        public function insertUsers($iduser, $name, $last_name, $phone, $email, $pass, $cargo, $estado){
 
             // Conectamos con  la base de datos con la creación de un objeto de la clase conection
             $modelo = new Conection();
@@ -23,7 +23,7 @@
                 echo "<script>alert('DATOS YA EXISTENTES EN LA BASE DE DATOS, POR FAVOR VERIFIQUE.')</script>";
                 echo '<script>location.href="../views/Admin/registrar-usuarios-admin.php"</script>';
             } else {
-                $sql= "INSERT INTO users (iduser, name, last_name, phone, email, pass, cargo, status) VALUES(:iduser, :name, :last_name, :phone, :email, :pass, :cargo, :status)";
+                $sql= "INSERT INTO users (iduser, name, last_name, phone, email, pass, cargo, estado) VALUES(:iduser, :name, :last_name, :phone, :email, :pass, :cargo, :estado)";
                 
                 // Se crean las declaraciones donde igualaremos los datos enviados desde el formulario a los values
                 $statement = $conection->prepare($sql);
@@ -35,7 +35,7 @@
                 $statement->bindParam(':email',$email);
                 $statement->bindParam(':pass',$pass);
                 $statement->bindParam(':cargo',$cargo);
-                $statement->bindParam(':status',$status);
+                $statement->bindParam(':estado',$estado);
                 
                 // Validamos y ejecutamos la consulta
 
@@ -45,7 +45,7 @@
                 else{
                     $statement->execute();
                     echo "<script>alert('USUARIO REGISTRADO CON EXITO')</script>";
-                    echo '<script>location.href="../views/Admin/registrar-usuarios-admin.php"</script>';
+                    echo '<script>location.href="../views/Admin/ver-usuarios-admin.php"</script>';
                 }
             }
 

@@ -10,17 +10,17 @@
     $email=$_POST['email'];
     $pass=$_POST['pass'];
     $cargo=$_POST['cargo'];
-    $status=$_POST['status'];
+    $estado=$_POST['estado'];
 
     // Validamos que los campos no vengan vacios
 
-    if (strlen($iduser)>0 && strlen($name)>0 && strlen($last_name)>0 && strlen($phone)>0 && strlen($email)>0  && strlen($pass)>0 && strlen($cargo)>0 && strlen($status)>0 ) {
+    if (strlen($iduser)>0 && strlen($name)>0 && strlen($last_name)>0 && strlen($phone)>0 && strlen($email)>0  && strlen($pass)>0 && strlen($cargo)>0 && strlen($estado)>0 ) {
         // Encriptamos la contraseña
         $passmd=md5($pass);
         // Llamamos la clase Consultas (consultasAdmin.php)
         $objetoConsultas= new Consultas();
         // Creamos una variable para que toda nos guarde la información ya llena.
-        $result= $objetoConsultas->insertUsers($iduser, $name, $last_name, $phone, $email, $passmd, $cargo, $status);
+        $result= $objetoConsultas->insertUsers($iduser, $name, $last_name, $phone, $email, $passmd, $cargo, $estado);
     }
     else {
         echo "<script>alert('POR FAVOR COMPLETE TODOS LOS CAMPOS')</script>";

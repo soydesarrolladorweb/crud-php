@@ -128,18 +128,18 @@
                         <label for="cargo">Cargo</label>
                         <select class="form-control" name="cargo" id="cargo" required="">
                               <option>Seleccione un Rol</option>
-                              <option value="1">Administrador</option>
-                              <option value="2">Supervisor</option>
-                              <option value="3">Vendedor</option>
+                              <option value="Administrador">Administrador</option>
+                              <option value="Supervisor">Supervisor</option>
+                              <option value="Vendedor">Vendedor</option>
                         </select>
                       </div>
 
                       <div class="form-group col-md-6 ">
-                        <label for="status">Estatus</label>
-                        <select class="form-control" name="status"  id="status" required="">
+                        <label for="estado">Estatus</label>
+                        <select class="form-control" name="estado"  id="estado" required="">
                               <option>Activar Usuario</option>
-                              <option value="0">Activo 1</option>
-                              <option value="1">Inactivo 0</option>
+                              <option value="Activo">Activo</option>
+                              <option value="Inactivo">Inactivo</option>
                         </select>
                       </div>
                     </div>
