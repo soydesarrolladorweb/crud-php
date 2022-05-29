@@ -19,8 +19,8 @@
 <div class="wrapper">
     <div class="container">
         <div class="row cont__form">
-            <form class="form__login bd-mobile" action="controller/iniciarSesion.php" method="$_POST">
-                <h2>Sign In</h2>
+            <form class="form__login bd-mobile" action="controller/iniciarSesion.php" method="POST">
+                <h2>INICIAR SESIÓN</h2>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
                   <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">

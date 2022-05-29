@@ -93,12 +93,12 @@
 
         }
 
-        public function modificarUser($iduser, $name, $last_name, $phone, $email, $cargo){
+        public function modificarUser($iduser, $name, $last_name, $phone, $email, $cargo, $estado){
             
             $modelo = new Conection();
             $conection = $modelo->get_conection();
 
-            $sql= "UPDATE users SET iduser=:iduser, name=:name, last_name=:last_name, phone=:phone, email=:email, cargo=:cargo WHERE iduser=:iduser";
+            $sql= "UPDATE users SET iduser=:iduser, name=:name, last_name=:last_name, phone=:phone, email=:email, cargo=:cargo, estado=:estado WHERE iduser=:iduser";
 
                 $statement = $conection->prepare($sql);
     
@@ -108,6 +108,7 @@
                 $statement->bindParam(':phone',$phone);
                 $statement->bindParam(':email',$email);
                 $statement->bindParam(':cargo',$cargo);
+                $statement->bindParam(':estado',$estado);
     
                 if (!$statement) {
                     return "Error al registrar usuario";
@@ -131,11 +132,11 @@
                 echo "<script>alert('ERROR AL ELIMINAR - INTENTE NUEVAMENTE')</script>";
                 echo '<script>location.href="../views/Admin/ver-usuarios-admin.php"</script>';
             }
+            
             else{
                 $statement->execute();
                     echo "<script>alert('USUARIO ELIMINADO CON EXITO')</script>";
-                    echo '<script>location.href="../views/Admin/ver-usuarios-admin.php"</script>';
-                
+                    echo '<script>location.href="../views/Admin/ver-usuarios-admin.php"</script>'; 
             }
         }
 

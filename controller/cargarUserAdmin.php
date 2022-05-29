@@ -47,6 +47,17 @@
                       </select>
                     </div>
                   </div>
+                  <div class="row">
+
+                  <div class="form-group col-md-6 ">
+                  <label for="estado">Estatus</label>
+                  <select class="form-control" name="estado"  id="estado" required="">
+                        <option value="'.$f['estado'].'">'.$f['estado'].'</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                  </select>
+                </div>
+                  </div>
                 </div>
                 
                 <div class="card-footer text-center">
