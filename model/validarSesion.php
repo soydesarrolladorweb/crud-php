@@ -20,8 +20,7 @@
                     $_SESSION['pass'] =$f['pass'];
                     $_SESSION['cargo'] =$f['cargo'];
                     $_SESSION['estado'] =$f['estado'];
-
-                    // $_SESSION['autenticado']="SI";
+                    $_SESSION['autenticado']="SI";
 
                     if ($f['estado'] == "Activo") {
                         if ($f['cargo'] == "Administrador") {

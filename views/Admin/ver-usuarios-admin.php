@@ -2,6 +2,8 @@
   require_once("../../model/conection.php");
   require_once("../../model/consultasAdmin.php");
   require_once("../../controller/cargarUsersAdmin.php");
+  require_once('../../controller/verPerfil.php');
+  require_once('../../model/seguridad.php');
 ?>
 
 

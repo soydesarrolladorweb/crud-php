@@ -1,22 +1,17 @@
+<?php
+  require_once('../../model/conection.php');
+  require_once('../../model/validarSesion.php');
+  require_once('../../model/consultasAdmin.php');
+  require_once('../../controller/verPerfil.php');
+  require_once('../../model/seguridad.php');
+?>
+
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     
-    <a href="../../index.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Practice System</span>
-    </a>
-
-    
-    <div class="sidebar">
-      
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../../dist/img/user6-128x128.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Fabian Barrera</a>
-        </div>
-      </div>
+    <?php
+      perfil();
+    ?>
 
       
       <nav class="mt-2">

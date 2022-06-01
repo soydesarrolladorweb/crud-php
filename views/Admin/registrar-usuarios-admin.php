@@ -143,6 +143,13 @@
                         </select>
                       </div>
                     </div>
+
+                    <div class="row">
+                      <div class="form-group col-md-6 ">
+                        <label for="foto">Cargar Foto</label>
+                        <input type="file" class="form-control" name="foto" id="foto" required="">
+                      </div>
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer text-center">

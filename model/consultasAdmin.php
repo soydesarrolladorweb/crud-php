@@ -140,5 +140,22 @@
             }
         }
 
+        public function verPerfil($email){
+            $resultado = null;
+            $modelo = new Conection();
+            $conection = $modelo->get_conection();
+
+            $sql = "SELECT * FROM users WHERE email=:email";
+            $result=$conection->prepare($sql);
+
+            $result->bindParam(':email', $email);
+            $result->execute();
+
+            while ($f = $result->fetch()) {
+                $resultado[]= $f;
+            }
+            return $resultado;
+        }
+
     }
 ?>
