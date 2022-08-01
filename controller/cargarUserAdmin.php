@@ -50,13 +50,20 @@
                   <div class="row">
 
                   <div class="form-group col-md-6 ">
-                  <label for="estado">Estatus</label>
-                  <select class="form-control" name="estado"  id="estado" required="">
-                        <option value="'.$f['estado'].'">'.$f['estado'].'</option>
-                        <option value="Activo">Activo</option>
-                        <option value="Inactivo">Inactivo</option>
-                  </select>
-                </div>
+                    <label for="estado">Estatus</label>
+                    <select class="form-control" name="estado"  id="estado" required="">
+                          <option value="'.$f['estado'].'">'.$f['estado'].'</option>
+                          <option value="Activo">Activo</option>
+                          <option value="Inactivo">Inactivo</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-6 ">
+                        <label for="foto">Cargar Foto</label>
+                        <input type="file" class="form-control" value="'.$f['foto'].'" name="foto" id="foto">
+                      </div>
+                  </div>
+
                   </div>
                 </div>
                 

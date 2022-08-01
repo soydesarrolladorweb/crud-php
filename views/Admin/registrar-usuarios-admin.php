@@ -1,3 +1,12 @@
+<?php
+  require_once("../../model/conection.php");
+  require_once('../../model/validarSesion.php');
+  require_once("../../model/consultasAdmin.php");
+  require_once("../../controller/cargarUsersAdmin.php");
+  require_once('../../controller/verPerfil.php');
+  require_once('../../model/seguridad.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +98,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="../../controller/insertUsers.php" method="POST" autocomplete="on">
+              <form role="form" action="../../controller/insertUsers.php" enctype="multipart/form-data" method="POST" autocomplete="on">
                 <div class="card-body">
 
                   <div class="row">

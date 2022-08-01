@@ -1,8 +1,12 @@
 <?php
   require_once("../../model/conection.php");
+  require_once('../../model/validarSesion.php');
   require_once("../../model/consultasAdmin.php");
-  require_once("../../controller/cargarUsersAdmin.php");
+  require_once("../../controller/cargarUserAdmin.php");
+  require_once('../../controller/verPerfil.php');
+  require_once('../../model/seguridadVendedor.php');
 ?>
+
 
 
 <!DOCTYPE html>
@@ -58,7 +62,7 @@
 
   <!-- Main Sidebar Container -->
   <?php
-  include("../../includes/sidebar.php");
+  include("../../includes/sidebarVentas.php");
   ?>
 
   <!-- Content Wrapper. Contains page content -->

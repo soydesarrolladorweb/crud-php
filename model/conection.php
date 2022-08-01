@@ -8,8 +8,8 @@
             $host="localhost";
             $db="practiceProject";
 
-            // Se crea la clase conection, se agrega la instancia de PDO y los tres parametros necesarios para la conexión.
-            // el host con el dbname, el usuario y la contraseña.
+            // Se crea la clase conection, se agrega la instancia de PDO y los cuatro parametros necesarios para la conexión.
+            // mysql con el host, igualamos la dbname con la variable $db, el usuario y la contraseña.
 
             $conection= new PDO("mysql:host=$host; dbname=$db;", $user, $pass);
             return $conection;

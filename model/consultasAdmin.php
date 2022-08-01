@@ -2,9 +2,9 @@
     // Se crea la clase ya que estamos programando orientado en objetos
     class Consultas{
         // Llamamos los argumentos necesarios para realizar el registro, se deben utilizar los mismos nombres de la db
-        public function insertUsers($iduser, $name, $last_name, $phone, $email, $pass, $cargo, $estado){
+        public function insertUsers($iduser, $name, $last_name, $phone, $email, $pass, $cargo, $estado, $rutaImg){
 
-            // Conectamos con  la base de datos con la creación de un objeto de la clase conection
+            // Conectamos con  la base de datos con la creación de un objeto de la clase Conection del archivo conection.php
             $modelo = new Conection();
             $conection = $modelo->get_conection();
 
@@ -23,7 +23,7 @@
                 echo "<script>alert('DATOS YA EXISTENTES EN LA BASE DE DATOS, POR FAVOR VERIFIQUE.')</script>";
                 echo '<script>location.href="../views/Admin/registrar-usuarios-admin.php"</script>';
             } else {
-                $sql= "INSERT INTO users (iduser, name, last_name, phone, email, pass, cargo, estado) VALUES(:iduser, :name, :last_name, :phone, :email, :pass, :cargo, :estado)";
+                $sql= "INSERT INTO users (iduser, name, last_name, phone, email, pass, cargo, estado, foto) VALUES(:iduser, :name, :last_name, :phone, :email, :pass, :cargo, :estado, :foto)";
                 
                 // Se crean las declaraciones donde igualaremos los datos enviados desde el formulario a los values
                 $statement = $conection->prepare($sql);
@@ -36,6 +36,7 @@
                 $statement->bindParam(':pass',$pass);
                 $statement->bindParam(':cargo',$cargo);
                 $statement->bindParam(':estado',$estado);
+                $statement->bindParam(':foto',$rutaImg);
                 
                 // Validamos y ejecutamos la consulta
 
@@ -142,6 +143,7 @@
 
         public function verPerfil($email){
             $resultado = null;
+            
             $modelo = new Conection();
             $conection = $modelo->get_conection();
 
